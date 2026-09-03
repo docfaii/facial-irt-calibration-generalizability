@@ -1,0 +1,15 @@
+# PhysioNet source data — not redistributed, download directly from PhysioNet
+FLIR_groups1and2.csv
+ICI_groups1and2.csv
+
+# Generated output (regenerate via run_analysis.py — don't commit fresh runs by accident)
+report/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
