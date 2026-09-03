@@ -1,0 +1,19 @@
+device,variable,value,n,pct
+FLIR,Gender,Female,576,60.31
+FLIR,Gender,Male,379,39.69
+FLIR,Ethnicity,White,474,49.63
+FLIR,Ethnicity,Asian,240,25.13
+FLIR,Ethnicity,Black or African-American,137,14.35
+FLIR,Ethnicity,Hispanic/Latino,55,5.76
+FLIR,Ethnicity,Multiracial,49,5.13
+FLIR,age_band,<=30,903,94.55
+FLIR,age_band,>30,52,5.45
+ICI,Gender,Female,396,59.37
+ICI,Gender,Male,271,40.63
+ICI,Ethnicity,White,324,48.58
+ICI,Ethnicity,Asian,175,26.24
+ICI,Ethnicity,Black or African-American,99,14.84
+ICI,Ethnicity,Hispanic/Latino,36,5.4
+ICI,Ethnicity,Multiracial,33,4.95
+ICI,age_band,<=30,627,94.0
+ICI,age_band,>30,40,6.0

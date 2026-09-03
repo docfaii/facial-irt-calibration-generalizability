@@ -1,0 +1,191 @@
+OFFLINE REPRODUCTION: Facial IRT calibration-heterogeneity analysis
+Random seed: 42  |  Bootstrap resamples: 1000
+
+======================================================================
+FLIR
+======================================================================
+Raw shape: (1020, 125)
+
+[FLIR] Feature comparison (T_OR_Max vs T_FH_Max):
+  feature=T_OR_Max: n=959, R2=0.588493, adjR2=0.586767, RMSE=0.325191, AIC=576.953
+  feature=T_FH_Max: n=959, R2=0.441855, adjR2=0.439515, RMSE=0.378724, AIC=869.248
+  -> CHOSEN: T_OR_Max (lower RMSE)
+
+[FLIR] Ethnicity x Sex cell counts:
+    Asian / Female: n=139
+    Asian / Male: n=101
+    Black or African-American / Female: n=83
+    Black or African-American / Male: n=54
+    Hispanic/Latino / Female: n=34
+    Hispanic/Latino / Male: n=21
+    Multiracial / Female: n=30
+    Multiracial / Male: n=19
+    White / Female: n=290
+    White / Male: n=184
+  No cells below n=10.
+
+[FLIR] Adjusted OLS: residual ~ sex + ethnicity + age_band + T_atm + Humidity + Distance
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  resid   R-squared:                       0.014
+Model:                            OLS   Adj. R-squared:                  0.004
+Method:                 Least Squares   F-statistic:                     1.485
+Date:                Mon, 31 Aug 2026   Prob (F-statistic):              0.149
+Time:                        22:36:08   Log-Likelihood:                -276.95
+No. Observations:                 955   AIC:                             573.9
+Df Residuals:                     945   BIC:                             622.5
+Df Model:                           9                                         
+Covariance Type:                  HC3                                         
+=================================================================================================
+                                    coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------
+const                            -0.0288      0.358     -0.080      0.936      -0.730       0.672
+T_atm                             0.0003      0.009      0.035      0.972      -0.018       0.018
+Humidity                      -1.853e-05      0.001     -0.024      0.981      -0.002       0.002
+Distance                         -0.0010      0.326     -0.003      0.997      -0.641       0.639
+Gender_Male                       0.0049      0.023      0.217      0.828      -0.039       0.049
+Eth_Black or African-American    -0.0592      0.038     -1.558      0.119      -0.134       0.015
+Eth_Hispanic/Latino               0.0566      0.042      1.348      0.178      -0.026       0.139
+Eth_Multiracial                   0.0356      0.053      0.674      0.500      -0.068       0.139
+Eth_White                         0.0412      0.025      1.625      0.104      -0.008       0.091
+age_gt30                          0.0629      0.037      1.688      0.091      -0.010       0.136
+==============================================================================
+Omnibus:                      123.268   Durbin-Watson:                   1.794
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              231.466
+Skew:                          -0.796   Prob(JB):                     5.47e-51
+Kurtosis:                       4.812   Cond. No.                         707.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+[FLIR] Missingness: 59 / 1020 subjects with >=1 missing round-level facial value (5.78%)
+  Sex vs missingness: chi2=4.2558, df=1, p=0.039116
+  Sex vs missingness (Fisher exact): OR=1.7964, p=0.029546
+  Ethnicity vs missingness: chi2=4.2571, df=4, p=0.372322, min expected cell=2.9035  [CAUTION: <5, chi-square approximation may be unreliable]
+
+======================================================================
+ICI
+======================================================================
+Raw shape: (1009, 125)
+
+[ICI] Feature comparison (T_OR_Max vs T_FH_Max):
+  feature=T_OR_Max: n=669, R2=0.562674, adjR2=0.560040, RMSE=0.309713, AIC=340.257
+  feature=T_FH_Max: n=669, R2=0.426103, adjR2=0.422646, RMSE=0.354792, AIC=522.072
+  -> CHOSEN: T_OR_Max (lower RMSE)
+
+[ICI] Ethnicity x Sex cell counts:
+    Asian / Female: n=97
+    Asian / Male: n=78
+    Black or African-American / Female: n=62
+    Black or African-American / Male: n=37
+    Hispanic/Latino / Female: n=24
+    Hispanic/Latino / Male: n=12
+    Multiracial / Female: n=21
+    Multiracial / Male: n=12
+    White / Female: n=192
+    White / Male: n=132
+  No cells below n=10.
+
+[ICI] Adjusted OLS: residual ~ sex + ethnicity + age_band + T_atm + Humidity + Distance
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  resid   R-squared:                       0.013
+Model:                            OLS   Adj. R-squared:                 -0.001
+Method:                 Least Squares   F-statistic:                     1.006
+Date:                Mon, 31 Aug 2026   Prob (F-statistic):              0.434
+Time:                        22:36:10   Log-Likelihood:                -161.03
+No. Observations:                 667   AIC:                             342.1
+Df Residuals:                     657   BIC:                             387.1
+Df Model:                           9                                         
+Covariance Type:                  HC3                                         
+=================================================================================================
+                                    coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------
+const                            -0.0621      0.235     -0.264      0.791      -0.523       0.398
+T_atm                             0.0012      0.009      0.131      0.896      -0.017       0.019
+Humidity                       1.071e-05      0.002      0.007      0.995      -0.003       0.003
+Distance                         -0.0011      0.088     -0.013      0.990      -0.173       0.171
+Gender_Male                       0.0294      0.025      1.168      0.243      -0.020       0.079
+Eth_Black or African-American    -0.0285      0.043     -0.659      0.510      -0.113       0.056
+Eth_Hispanic/Latino               0.0347      0.052      0.666      0.505      -0.068       0.137
+Eth_Multiracial                   0.0614      0.049      1.259      0.208      -0.034       0.157
+Eth_White                         0.0323      0.030      1.079      0.280      -0.026       0.091
+age_gt30                          0.0856      0.047      1.813      0.070      -0.007       0.178
+==============================================================================
+Omnibus:                       82.998   Durbin-Watson:                   1.856
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              124.596
+Skew:                          -0.850   Prob(JB):                     8.80e-28
+Kurtosis:                       4.262   Cond. No.                     2.23e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The condition number is large, 2.23e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+[ICI] Missingness: 338 / 1009 subjects with >=1 missing round-level facial value (33.50%)
+  Sex vs missingness: chi2=0.0420, df=1, p=0.837575
+  Sex vs missingness (Fisher exact): OR=0.9636, p=0.838542
+  Ethnicity vs missingness: chi2=1.0212, df=4, p=0.906561, min expected cell=16.7164
+
+======================================================================
+PAIRED SENSITIVITY ANALYSIS (matched SubjectID + Date)
+======================================================================
+Overlap SubjectIDs: 1003
+Same date: 1003
+Different date: 0
+FLIR usable in paired cohort: 939
+ICI usable in paired cohort: 663
+Combined long-format rows: 1602; unique subjects: 951
+
+[Paired] Ethnicity x Sex cell counts:
+    Asian / Female: n=233
+    Asian / Male: n=176
+    Black or African-American / Female: n=145
+    Black or African-American / Male: n=90
+    Hispanic/Latino / Female: n=57
+    Hispanic/Latino / Male: n=32
+    Multiracial / Female: n=51
+    Multiracial / Male: n=31
+    White / Female: n=474
+    White / Male: n=313
+  No cells below n=10.
+
+[Paired sensitivity] Adjusted OLS: residual ~ sex + ethnicity + age_band + T_atm + Humidity + Distance + device
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  resid   R-squared:                       0.012
+Model:                            OLS   Adj. R-squared:                  0.006
+Method:                 Least Squares   F-statistic:                     1.177
+Date:                Mon, 31 Aug 2026   Prob (F-statistic):              0.303
+Time:                        22:36:11   Log-Likelihood:                -439.64
+No. Observations:                1602   AIC:                             901.3
+Df Residuals:                    1591   BIC:                             960.4
+Df Model:                          10                                         
+Covariance Type:              cluster                                         
+=================================================================================================
+                                    coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------
+const                            -0.0028      0.197     -0.014      0.989      -0.389       0.384
+T_atm                            -0.0009      0.008     -0.109      0.913      -0.017       0.015
+Humidity                        1.78e-05   3.05e-05      0.583      0.560    -4.2e-05    7.76e-05
+Distance                         -0.0010      0.001     -1.804      0.071      -0.002    8.95e-05
+Gender_Male                       0.0144      0.022      0.660      0.509      -0.028       0.057
+Eth_Black or African-American    -0.0499      0.038     -1.329      0.184      -0.123       0.024
+Eth_Hispanic/Latino               0.0388      0.043      0.908      0.364      -0.045       0.123
+Eth_Multiracial                   0.0435      0.045      0.956      0.339      -0.046       0.133
+Eth_White                         0.0339      0.026      1.318      0.187      -0.017       0.084
+age_gt30                          0.0724      0.039      1.877      0.061      -0.003       0.148
+device_ICI                        0.0008      0.008      0.092      0.927      -0.016       0.017
+==============================================================================
+Omnibus:                      199.703   Durbin-Watson:                   1.816
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              350.525
+Skew:                          -0.814   Prob(JB):                     7.66e-77
+Kurtosis:                       4.613   Cond. No.                     1.51e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+[2] The condition number is large, 1.51e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
